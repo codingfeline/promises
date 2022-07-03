@@ -8,7 +8,7 @@ const checkAvailability = (itemName, distributorName) => {
       } else {
         reject(`Error: ${itemName} is unavailable from ${distributorName} at this time.`);
       }
-    }, 1000);
+    }, 3000);
   });
 };
 
@@ -18,5 +18,5 @@ module.exports = { checkAvailability };
 // This is a function that returns true 80% of the time
 // We're using it to simulate a request to the distributor being successful this often
 function restockSuccess() {
-  return (Math.random() > .2);
+  return (Math.random() > .9);
 }
